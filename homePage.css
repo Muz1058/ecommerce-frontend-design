@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.topHeader{
+    background-color: #000000;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+   
+    color: #fafafa;
+}
+.topHeader>span{
+    font-family:'Poppins';
+    font-size: 14px;
+}
+.topHeader>a{
+    color: #fafafa;
+    text-decoration: underline;
+}
+.topHeader>select {
+    
+    color: #fafafa;
+    background-color:#000000;
+    background-size: 24px;
+     height: 24px;
+    margin-left: 50px;
+    font-size: 14px;
+    border: none;    
+  }
+  .topHeader>select:hover .dropdown-content{
+    display: block;
+
+  }
+
+
