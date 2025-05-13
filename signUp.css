@@ -9,6 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: 'Poppins';
 }
 
 /* Top banner */
@@ -65,6 +66,7 @@ header {
     font-weight: bold;
     color: #000;
     text-decoration: none;
+    font-family: 'Inter';
 }
 
 nav ul {
@@ -114,6 +116,7 @@ nav ul li a {
     flex: 1;
     margin-bottom: 8%;
     height: 80vh;
+    overflow: hidden;
 }
 
 .image-section>img {
@@ -136,6 +139,8 @@ nav ul li a {
     margin-bottom: 15px;
     font-size: 36px;
     color: #000000;
+    font-family: 'Inter';
+
 }
 
 .form-subheading {
@@ -236,7 +241,7 @@ footer {
 }
 
 .footer-section {
-    width: 20%;
+    max-width: 20%;
 }
 
 
