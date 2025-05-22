@@ -175,7 +175,7 @@ justify-content:center;
 margin: 7%;
 padding: 0px;
 gap: 30px;
-width: 1170px;
+width: 85.6%;
 height: 230px;
 
 }
@@ -186,7 +186,8 @@ height: 230px;
 border: 1px solid rgba(0, 0, 0, 0.3);
 border-radius: 0px;
 
-padding: 30px 30px 10px 20px;}
+padding: 30px 30px 10px 20px;
+}
 
 .innerBox891{
      display: flex;
