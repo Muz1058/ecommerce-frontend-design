@@ -170,18 +170,17 @@ main {
 .card-profile {
   width: 370px;
   height: 564px;
-
-  border: 1px solid #ddd;
   border-radius: 12px;
   overflow: hidden;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-family: 'Poppins', sans-serif;
-  margin: 20px;
+  margin: 20px 0 50px;
 }
 
 .card-profile>.image img {
-
+height: 430px;
+width: 370px;
   width: 100%;
   display: block;
   object-fit: contain;
@@ -222,6 +221,44 @@ main {
 .social-icon:hover {
   opacity: 0.7;
 }
+
+
+.swiper {
+  padding: 40px 0;
+  width: 100%;
+  max-width: 1170px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Style Swiper pagination bullets as ellipses */
+.swiper .swiper-pagination-bullet {
+  width: 12px;
+  height: 6px;
+  border-radius: 12px;
+  background-color: #999;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+/* Active bullet with #DB4444 */
+.swiper .swiper-pagination-bullet-active {
+  width: 24px;
+  background-color: #DB4444;
+  opacity: 1;
+}
+
+
 
 
 /* Footer */
