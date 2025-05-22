@@ -54,6 +54,42 @@
     </div>
   </div>
 
+  <div class="frame891">
+    <div class="box891" id="activeSellers">
+        <div class="innerBox891">
+        <img src="activesellers.svg" alt="activeSellers">
+        <div class="counter">10.5k</div>
+        <div class="boxtext">Sallers active our site</div>
+        </div>
+        
+
+    </div>
+    <div class="box891" id="monthlyProductSales">
+        <div class="innerBox891">
+            <img src="monthlyProductSalesIcon.svg" alt="activeSellers">
+        <div class="counter">33k</div>
+        <div class="boxtext">Monthly Product Sale</div
+            ></div>
+        
+    </div>
+    <div class="box891" id="activeCustomer">
+        <div class="innerBox891">
+        <img src="activeCustomer.svg" alt="activeCustomer">
+        <div class="counter">45.5k</div>
+        <div class="boxtext">Customer active in our site</div>
+        </div>
+        
+    </div>
+    <div class="box891" id="anualGrossSales">
+        <div class="innerBox891">
+        <img src="anualGrossSalesIcon.svg" alt="anualGrossSales">
+        <div class="counter">25k</div>
+        <div class="boxtext">Anual gross sale in our site</div>
+        </div>
+       
+    </div>
+  </div>
+
 
   
     <div class="swiper">
@@ -151,9 +187,28 @@
 
  
   <div class="swiper-pagination"></div>
+
+
+
 </div>
 
-
+<div class="frame703">
+    <div class="box703">
+        <img src="delivery.svg" alt="delivery">
+        <div class="box703title">FREE AND FAST DELIVERY</div>
+        <div class="box703description">Free delivery for all orders over $140</div>
+    </div>
+    <div class="box703">
+        <img src="customerService.svg" alt="Customer service">
+        <div class="box703title">24/7 CUSTOMER SERVICE</div>
+        <div class="box703description">Friendly 24/7 customer support</div>
+    </div>
+    <div class="box703">
+        <img src="warrenty.svg" alt="warrenty">
+        <div class="box703title">MONEY BACK GUARANTEE</div>
+        <div class="box703description">We reurn money within 30 days</div>
+    </div>
+</div>
 
 </main>
 
@@ -277,4 +332,46 @@
   </script>
 
 </body>
+<script>
+  const counters = document.querySelectorAll('.counter');
+  const speed = 100; 
+
+  function animateCounter(counter) {
+    const targetText = counter.innerText;
+    const target = parseFloat(targetText) * (targetText.includes('k') ? 1000 : 1);
+    let count = 0;
+
+    const updateCount = () => {
+      const increment = target / speed;
+      if (count < target) {
+        count += increment;
+        const display = count >= 1000 ? (count / 1000).toFixed(1) + 'k' : Math.ceil(count);
+        counter.innerText = display;
+        requestAnimationFrame(updateCount);
+      } else {
+        counter.innerText = targetText;
+      }
+    };
+
+    updateCount();
+  }
+
+  const options = {
+    threshold: 0.6 
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const counter = entry.target;
+        animateCounter(counter);
+        observer.unobserve(counter); // Prevent it from re-running
+      }
+    });
+  }, options);
+
+
+  counters.forEach(counter => observer.observe(counter));
+</script>
+
 </html>
