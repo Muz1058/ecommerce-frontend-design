@@ -77,10 +77,11 @@ nav ul li {
     margin: 0 15px;
     border-bottom: 1px solid transparent;
 }
-nav ul li:hover{
+
+nav ul li:hover {
     opacity: 0.5;
-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-border-bottom: 1px solid #000000;
+    transform: translateY(-2px); 
+    transition: all 0.2s ease;
 }
 nav ul li a {
     text-decoration: none;
@@ -128,9 +129,196 @@ nav ul li a {
     width: 32px;
    height: 32px;
 }
+
+
 /* Main content */
+.product-page{
 
+    display: flex;
+    flex-direction: row;
+    gap: 6vw;
+    align-items: center;
+   
+    margin-left: 7vw;
+    margin-right:7vw;
 
+}
+.product-images{
+    display: flex;
+    gap: 2vw;
+}
+.thumbnail-images{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+.thumbnail-images img{
+    width: 15vw;
+    height: 138px;
+    border-radius: 4%;
+    
+}
+.main-image img{
+    height: 600px;
+    width: 35vw;
+    border-radius: 4%;
+
+}
+.product-details{
+    height: 600px;
+    width: 30vw;
+    
+}
+.productName{
+    font-family: 'Inter';
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: 3%;
+    color: #000000;
+}
+.star{
+    height: 20px;
+    width: 20px;
+    border-radius: 1.4%;
+    opacity: 0.25;
+}
+.reviewText{
+    font-family: 'Poppins';
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    opacity: 0.5;
+    color: #000000;
+}
+
+#reviewSpacing{
+    letter-spacing: 5%;
+    opacity: 0.5;
+    font-family: 'Poppins';
+    font-size: 16px;
+    line-height: 2em;
+}
+
+ #reviewSpacing::before,
+  #reviewSpacing::after{
+    content: "  "; 
+    white-space: pre;
+}
+
+  #stockAvailbility{
+  
+    height: 21px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 2em;
+    color: #00FF66;
+    opacity: 0.6;
+}
+
+  #productPrice{
+      font-style: normal;
+      font-family: 'Inter';
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 48px;
+
+      letter-spacing: 3%;
+      color: #000000;
+}
+.productDescription{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0%;
+    counter-reset: #000000;
+}
+
+color-selector {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .label {
+            font-size: 24px;
+            font-weight: 500;
+            color: #333;
+            margin-right: 10px;
+        }
+
+        .color-options {
+            display: flex;
+            gap: 15px;
+        }
+
+        .color-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            border: 3px solid transparent;
+        }
+
+        .color-circle:hover {
+            transform: scale(1.2);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .color-circle.selected {
+            border-color: #007bff;
+            box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+        }
+
+        .blue {
+            background-color: #e3f2fd;
+            border: 3px solid #1976d2;
+        }
+
+        .blue:hover {
+            background-color: #bbdefb;
+            border-color: #0d47a1;
+        }
+
+        .pink {
+            background-color: #f8bbd9;
+        }
+
+        .pink:hover {
+            background-color: #f48fb1;
+            transform: scale(1.2);
+        }
+
+        .color-circle::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            width: 8px;
+            height: 8px;
+            background-color: white;
+            border-radius: 50%;
+            transition: transform 0.2s ease;
+        }
+
+        .color-circle:hover::after {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .color-circle.selected::after {
+            transform: translate(-50%, -50%) scale(1);
+        }
 
 
 
@@ -139,6 +327,7 @@ footer {
     background-color: #000;
     color: white;
     padding-top: 40px ;    
+    overflow: hidden;
 }
 
 .footer-content {
@@ -235,7 +424,12 @@ border: none;
     grid-template-areas: 'qrCode  qrCode Google'
                          'qrCode  qrCode Apple';
 }
-
+.app-badges{
+    height: 85px;
+    width: 110px;
+    margin: 0;
+    padding: 0;
+}
 .app-badge img {
     height: 40px;
     width: 110px;
@@ -249,6 +443,7 @@ grid-area: Google;
 grid-area: Apple;
 }
 .qr-code {
+    margin-top: 5px;
     grid-area: qrCode;
     width: 80px;
     height: 80px;
