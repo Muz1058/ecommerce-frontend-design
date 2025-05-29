@@ -1,0 +1,323 @@
+/* ============================================== CSS Variables ============================================== */
+:root {
+    /* Colors */
+    --primary-color: #db4444;
+    --text-color: #000000;
+    --background-light: #ffffff;
+    --background-dark: #000000;
+    --background-grey: #f5f5f5;
+    --text-light: #fafafa;
+    --text-secondary: #7d8184;
+    --accent-green: #00ff66;
+
+    /* Fonts */
+    --font-primary: "Poppins", sans-serif;
+    --font-secondary: "Inter", sans-serif;
+
+    /* Spacing & Sizing */
+    --container-width: min(85.7vw, 1200px);
+    --header-height: 80px;
+    --footer-padding: 40px;
+    --grid-gap: 30px;
+    --border-radius: 4px;
+    
+    /* Responsive spacing */
+    --section-padding: clamp(20px, 5vw, 5%);
+    --component-gap: clamp(15px, 3vw, 30px);
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--text-color);
+    background-color: var(--background-light);
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    width: var(--container-width);
+    margin: 0 auto;
+    padding: var(--section-padding);
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    margin-bottom: clamp(20px, 4vw, 40px);
+    font-size: 14px;
+}
+
+.breadcrumb-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-link:hover {
+    color: var(--text-color);
+}
+
+.breadcrumb-separator {
+    margin: 0 8px;
+    color: var(--text-secondary);
+}
+
+.breadcrumb-current {
+    color: var(--text-color);
+}
+
+/* Welcome Section */
+.welcome-section {
+    margin-bottom: clamp(30px, 5vw, 50px);
+    text-align: right;
+}
+
+.welcome-text {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.welcome-name {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* Main Content Layout */
+.main-content {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: clamp(30px, 5vw, 60px);
+    align-items: start;
+}
+
+/* Sidebar */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--component-gap);
+}
+
+.sidebar-section {
+    margin-bottom: 20px;
+}
+
+.sidebar-title {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.sidebar-menu {
+    list-style: none;
+    margin-left: 15px;
+}
+
+.sidebar-menu li {
+    margin-bottom: 8px;
+}
+
+.sidebar-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    display: block;
+    padding: 5px 0;
+}
+
+.sidebar-link:hover,
+.sidebar-link.active {
+    color: var(--primary-color);
+}
+
+/* Profile Form */
+.profile-form {
+    background: var(--background-light);
+    padding: clamp(20px, 4vw, 40px);
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-title {
+    font-size: clamp(18px, 4vw, 20px);
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-bottom: clamp(20px, 4vw, 30px);
+}
+
+/* Form Styles */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--component-gap);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--component-gap);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-label {
+    font-size: 16px;
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+.form-input {
+    padding: 12px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    font-family: var(--font-primary);
+    background-color: var(--background-grey);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(219, 68, 68, 0.1);
+}
+
+.form-input::placeholder {
+    color: var(--text-secondary);
+}
+
+/* Password Section */
+.password-section {
+    margin-top: var(--component-gap);
+}
+
+.password-title {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+.form-group{
+    margin-bottom: 10px;
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: clamp(20px, 4vw, 30px);
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    font-family: var(--font-primary);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    min-width: 120px;
+}
+
+.btn-cancel {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid #e0e0e0;
+}
+
+.btn-cancel:hover {
+    background-color: var(--background-grey);
+}
+
+.btn-save {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.btn-save:hover {
+    background-color: #c13333;
+    transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+        gap: var(--component-gap);
+    }
+    
+    .sidebar {
+        order: 2;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .sidebar-section {
+        margin-bottom: 0;
+        min-width: 200px;
+    }
+    
+    .profile-form {
+        order: 1;
+        padding: clamp(15px, 4vw, 25px);
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .form-actions {
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+    
+    .welcome-section {
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        flex-direction: column;
+    }
+    
+    .sidebar-section {
+        min-width: auto;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+    
+    .form-input {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
