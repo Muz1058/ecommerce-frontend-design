@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="header.css" />
     <link rel="stylesheet" href="checkout.css" />
     <link rel="stylesheet" href="footer.css" />
-    
   </head>
 
   <body>
@@ -109,144 +108,228 @@
     </header>
     <main>
       <!-- Breadcrumb -->
-    <div class="breadcrumb-container">
+      <div class="breadcrumb-container">
         <div class="container">
-            <nav class="breadcrumb">
-                <a href="account.html" class="breadcrumb-link">Account</a>
-                <span class="breadcrumb-separator">/</span>
-                <a href="#" class="breadcrumb-link">My Account</a>
-                <span class="breadcrumb-separator">/</span>
-                <a href="product details.html" class="breadcrumb-link">Product</a>
-                <span class="breadcrumb-separator">/</span>
-                <a href="cart.html" class="breadcrumb-link">View Cart</a>
-                <span class="breadcrumb-separator">/</span>
-                <span class="breadcrumb-current">CheckOut</span>
-            </nav>
+          <nav class="breadcrumb">
+            <a href="account.html" class="breadcrumb-link">Account</a>
+            <span class="breadcrumb-separator">/</span>
+            <a href="#" class="breadcrumb-link">My Account</a>
+            <span class="breadcrumb-separator">/</span>
+            <a href="product details.html" class="breadcrumb-link">Product</a>
+            <span class="breadcrumb-separator">/</span>
+            <a href="cart.html" class="breadcrumb-link">View Cart</a>
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-current">CheckOut</span>
+          </nav>
         </div>
-    </div>
+      </div>
 
-    <!-- Checkout Section -->
-    <div class="checkout-section">
+      <!-- Checkout Section -->
+      <div class="checkout-section">
         <div class="container">
-            <div class="checkout-layout">
-                <!-- Billing Details -->
-                <div class="billing-details">
-                    <h2 class="section-title">Billing Details</h2>
-                    
-                    <form class="billing-form">
-                        <div class="form-group">
-                            <label for="firstName" class="form-label">First Name*</label>
-                            <input type="text" id="firstName" name="firstName" class="form-input" required>
-                        </div>
+          <div class="checkout-layout">
+            <!-- Billing Details -->
+            <div class="billing-details">
+              <h2 class="section-title">Billing Details</h2>
 
-                        <div class="form-group">
-                            <label for="companyName" class="form-label">Company Name</label>
-                            <input type="text" id="companyName" name="companyName" class="form-input">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="streetAddress" class="form-label">Street Address*</label>
-                            <input type="text" id="streetAddress" name="streetAddress" class="form-input" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="apartment" class="form-label">Apartment, floor, etc. (optional)</label>
-                            <input type="text" id="apartment" name="apartment" class="form-input">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="townCity" class="form-label">Town/City*</label>
-                            <input type="text" id="townCity" name="townCity" class="form-input" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="phoneNumber" class="form-label">Phone Number*</label>
-                            <input type="tel" id="phoneNumber" name="phoneNumber" class="form-input" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="emailAddress" class="form-label">Email Address*</label>
-                            <input type="email" id="emailAddress" name="emailAddress" class="form-input" required>
-                        </div>
-
-                        <div class="form-group checkbox-group">
-                            <input type="checkbox" id="saveInfo" name="saveInfo" class="form-checkbox">
-                            <label for="saveInfo" class="checkbox-label">Save this information for faster check-out next time</label>
-                        </div>
-                    </form>
+              <form class="billing-form">
+                <div class="form-group">
+                  <label for="firstName" class="form-label">First Name*</label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    class="form-input"
+                    required
+                  />
                 </div>
 
-                <!-- Order Summary -->
-                <div class="order-summary">
-                    <!-- Order Items -->
-                    <div class="order-items">
-                        <div class="order-item">
-                            <div class="item-info">
-                                <div class="item-image">
-                                    <img src="resourses/IPS LCD Gaming Monitor/IPS LCD Gaming Monitor.png" alt="item-image">
-                                </div>
-                                <span class="item-name">LCD Monitor</span>
-                            </div>
-                            <span class="item-price">$650</span>
-                        </div>
-
-                        <div class="order-item">
-                            <div class="item-info">
-                                <div class="item-image">
-                                   <img src="resourses/JBL_BOOMBOX_2_HERO_020_x1 (1) 1.png" alt="item-image">
-                                </div>
-                                <span class="item-name">H1 Gamepad</span>
-                            </div>
-                            <span class="item-price">$1100</span>
-                        </div>
-                    </div>
-
-                    <!-- Order Totals -->
-                    <div class="order-totals">
-                        <div class="total-row">
-                            <span class="total-label">Subtotal:</span>
-                            <span class="total-value">$1750</span>
-                        </div>
-                        <div class="total-row">
-                            <span class="total-label">Shipping:</span>
-                            <span class="total-value">Free</span>
-                        </div>
-                        <div class="total-row total-final">
-                            <span class="total-label">Total:</span>
-                            <span class="total-value">$1750</span>
-                        </div>
-                    </div>
-
-                    <!-- Payment Methods -->
-                    <div class="payment-methods">
-                        <div class="payment-option">
-                            <input type="radio" id="bank" name="payment" value="bank" class="payment-radio">
-                            <label for="bank" class="payment-label">Bank</label>
-                            <div class="payment-icons">
-                                <!-- Payment method icons will be added here -->
-                            </div>
-                        </div>
-
-                        <div class="payment-option">
-                            <input type="radio" id="cash" name="payment" value="cash" class="payment-radio" checked>
-                            <label for="cash" class="payment-label">Cash on delivery</label>
-                        </div>
-                    </div>
-
-                    <!-- Coupon Section -->
-                    <div class="coupon-section">
-                        <div class="coupon-input-group">
-                            <input type="text" placeholder="Coupon Code" class="coupon-input">
-                            <button class="btn btn-primary">Apply Coupon</button>
-                        </div>
-                    </div>
-
-                    <!-- Place Order Button -->
-                    <button class="btn btn-primary btn-place-order">Place Order</button>
+                <div class="form-group">
+                  <label for="companyName" class="form-label"
+                    >Company Name</label
+                  >
+                  <input
+                    type="text"
+                    id="companyName"
+                    name="companyName"
+                    class="form-input"
+                  />
                 </div>
+
+                <div class="form-group">
+                  <label for="streetAddress" class="form-label"
+                    >Street Address*</label
+                  >
+                  <input
+                    type="text"
+                    id="streetAddress"
+                    name="streetAddress"
+                    class="form-input"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="apartment" class="form-label"
+                    >Apartment, floor, etc. (optional)</label
+                  >
+                  <input
+                    type="text"
+                    id="apartment"
+                    name="apartment"
+                    class="form-input"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="townCity" class="form-label">Town/City*</label>
+                  <input
+                    type="text"
+                    id="townCity"
+                    name="townCity"
+                    class="form-input"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="phoneNumber" class="form-label"
+                    >Phone Number*</label
+                  >
+                  <input
+                    type="tel"
+                    id="phoneNumber"
+                    name="phoneNumber"
+                    class="form-input"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="emailAddress" class="form-label"
+                    >Email Address*</label
+                  >
+                  <input
+                    type="email"
+                    id="emailAddress"
+                    name="emailAddress"
+                    class="form-input"
+                    required
+                  />
+                </div>
+
+                <div class="form-group checkbox-group">
+                  <input
+                    type="checkbox"
+                    id="saveInfo"
+                    name="saveInfo"
+                    class="form-checkbox"
+                  />
+                  <label for="saveInfo" class="checkbox-label"
+                    >Save this information for faster check-out next time</label
+                  >
+                </div>
+              </form>
             </div>
+
+            <!-- Order Summary -->
+            <div class="order-summary">
+              <!-- Order Items -->
+              <div class="order-items">
+                <div class="order-item">
+                  <div class="item-info">
+                    <div class="item-image">
+                      <img
+                        src="resourses/IPS LCD Gaming Monitor/IPS LCD Gaming Monitor.png"
+                        alt="item-image"
+                      />
+                    </div>
+                    <span class="item-name">LCD Monitor</span>
+                  </div>
+                  <span class="item-price">$650</span>
+                </div>
+
+                <div class="order-item">
+                  <div class="item-info">
+                    <div class="item-image">
+                      <img
+                        src="resourses/JBL_BOOMBOX_2_HERO_020_x1 (1) 1.png"
+                        alt="item-image"
+                      />
+                    </div>
+                    <span class="item-name">H1 Gamepad</span>
+                  </div>
+                  <span class="item-price">$1100</span>
+                </div>
+              </div>
+
+              <!-- Order Totals -->
+              <div class="order-totals">
+                <div class="total-row">
+                  <span class="total-label">Subtotal:</span>
+                  <span class="total-value">$1750</span>
+                </div>
+                <div class="total-row">
+                  <span class="total-label">Shipping:</span>
+                  <span class="total-value">Free</span>
+                </div>
+                <div class="total-row total-final">
+                  <span class="total-label">Total:</span>
+                  <span class="total-value">$1750</span>
+                </div>
+              </div>
+
+              <!-- Payment Methods -->
+              <div class="payment-methods">
+                <div class="payment-option">
+                  <input
+                    type="radio"
+                    id="bank"
+                    name="payment"
+                    value="bank"
+                    class="payment-radio"
+                  />
+                  <label for="bank" class="payment-label">Bank</label>
+                  <div class="payment-icons">
+                    <!-- Payment method icons will be added here -->
+                  </div>
+                </div>
+
+                <div class="payment-option">
+                  <input
+                    type="radio"
+                    id="cash"
+                    name="payment"
+                    value="cash"
+                    class="payment-radio"
+                    checked
+                  />
+                  <label for="cash" class="payment-label"
+                    >Cash on delivery</label
+                  >
+                </div>
+              </div>
+
+              <!-- Coupon Section -->
+              <div class="coupon-section">
+                <div class="coupon-input-group">
+                  <input
+                    type="text"
+                    placeholder="Coupon Code"
+                    class="coupon-input"
+                  />
+                  <button class="btn btn-primary">Apply Coupon</button>
+                </div>
+              </div>
+
+              <!-- Place Order Button -->
+              <button class="btn btn-primary btn-place-order">
+                Place Order
+              </button>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
     </main>
 
     <!-- Footer -->
@@ -291,7 +374,7 @@
         <div class="footer-section">
           <h3>Account</h3>
           <ul>
-            <li><a href="#">My Account</a></li>
+            <li><a href="account.html">My Account</a></li>
             <li><a href="logIn.html">Login / Register</a></li>
             <li><a href="cart.html">Cart</a></li>
             <li><a href="wishlist.html">Wishlist</a></li>
@@ -313,7 +396,11 @@
           <h3>Download App</h3>
           <p id="newUserOffer">Save $3 with App New User Only</p>
           <div class="app-download">
-            <img src="resourses/qrCodeAppDownload.png" alt="QR Code" class="qr-code" />
+            <img
+              src="resourses/qrCodeAppDownload.png"
+              alt="QR Code"
+              class="qr-code"
+            />
             <div class="app-badges">
               <a href="#" class="app-badge app-badge-Google">
                 <img src="resourses/google.png" alt="Google Play" />
@@ -426,7 +513,8 @@
             stroke-width="1.5"
             stroke-linecap="round"
             stroke-linejoin="round"
-          /></svg>
+          />
+        </svg>
         >Copyright Muz 2025. All right reserved
       </div>
     </footer>
