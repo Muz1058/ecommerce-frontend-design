@@ -558,7 +558,8 @@ Related Items Section
     overflow: hidden;
     transition: all 0.3s ease;
     position: relative;
-    width: 250px;
+    min-width: 290px;
+    max-width: 100%;
 }
 
 .item:hover {
