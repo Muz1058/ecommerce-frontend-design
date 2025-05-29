@@ -1,0 +1,226 @@
+/* ==============================================
+Footer
+==============================================
+*/
+footer {
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    padding: clamp(30px, 5vw, var(--footer-padding)) var(--section-padding);
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: clamp(20px, 4vw, 30px);
+    width: var(--container-width);
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: clamp(180px, 25vw, 200px);
+}
+
+.footer-logo {
+    font-size: clamp(20px, 4vw, 24px);
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.footer-section h3 {
+    margin-bottom: 24px;
+    font-weight: 500;
+    font-size: clamp(16px, 3vw, 18px);
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+    font-size: clamp(12px, 2vw, 14px);
+}
+
+.footer-section ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-section ul li a:hover {
+    color: var(--primary-color);
+}
+
+.subscribe-form {
+    display: flex;
+    border: 1.5px solid var(--text-light);
+    border-radius: var(--border-radius);
+    margin-top: 15px;
+    overflow: hidden;
+    height: clamp(44px, 6vw, 48px);
+    position: relative;
+    width: 100%;
+    max-width: 217px;
+}
+
+.subscribe-form input {
+    background: transparent;
+    color: var(--text-light);
+    outline: none;
+    border: none;
+    padding: 12px 50px 12px 16px;
+    width: 100%;
+    font-size: clamp(12px, 2vw, 14px);
+}
+
+.subscribe-form input::placeholder {
+    color: var(--text-light);
+    opacity: 0.7;
+}
+
+.subscribe-form button {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    background: transparent;
+    color: var(--text-light);
+}
+
+#newUserOffer {
+    font-size: clamp(10px, 1.5vw, 12px);
+    font-weight: 500;
+}
+
+.app-download {
+    margin-top: 15px;
+    display: grid;
+    gap: 8px;
+    grid-template-areas:
+        "qrCode Google"
+        "qrCode Apple";
+    align-items: center;
+    max-width: 250px;
+}
+
+.app-badge img {
+    height: clamp(35px, 6vw, 40px);
+    width: auto;
+    max-width: 110px;
+}
+
+.app-badge-Google {
+    grid-area: Google;
+}
+
+.app-badge-Apple {
+    grid-area: Apple;
+}
+
+.qr-code {
+    grid-area: qrCode;
+    width: clamp(70px, 12vw, 80px);
+    height: clamp(70px, 12vw, 80px);
+    margin-right: 10px;
+}
+
+.social-icons {
+    display: flex;
+    gap: clamp(15px, 3vw, 24px);
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: clamp(18px, 3vw, 24px);
+    transition: color 0.2s ease;
+}
+
+.social-icon:hover {
+    color: var(--primary-color);
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
+    padding-top: clamp(30px, 5vw, 40px);
+    margin-top: clamp(30px, 5vw, 40px);
+    border-top: 1px solid #333333;
+    opacity: 0.5;
+    color: var(--text-light);
+    font-size: clamp(12px, 2vw, 16px);
+    font-family: var(--font-primary);
+    line-height: 1.5;
+}
+
+/* ==============================================
+Footer Media Queries
+==============================================
+*/
+
+/* Tablet */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .app-download {
+        justify-content: center;
+        margin: 15px auto 0;
+        max-width: 300px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+   
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    footer {
+        padding: 30px 15px;
+    }
+
+    .footer-content {
+        gap: 25px;
+    }
+
+    .footer-section {
+        min-width: unset;
+    }
+
+    .app-download {
+        grid-template-areas:
+            "qrCode qrCode"
+            "Google Apple";
+        gap: 10px;
+        justify-items: center;
+    }
+
+    .qr-code {
+        justify-self: center;
+        margin: 0;
+    }
+
+    .subscribe-form {
+        height: 44px;
+        max-width: none;
+       
+    }
+
+    .subscribe-form input {
+        padding: 10px 40px 10px 12px;
+        font-size: 12px;
+        
+    }
+}
